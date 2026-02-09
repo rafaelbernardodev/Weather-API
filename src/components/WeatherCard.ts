@@ -29,19 +29,19 @@ export class WeatherCard {
 
     const temp = document.createElement("p");
     temp.className = "temperature";
-    temp.textContent = formatTemperature(data.temperature);
+    temp.textContent = `🌡️ ${formatTemperature(data.temperature)}`;
 
     const description = document.createElement("p");
     description.className = "description";
-    description.textContent = data.description;
+    description.textContent = `☁️ ${data.description}`;
 
     const wind = document.createElement("p");
     wind.className = "wind";
-    wind.textContent = `Vento: ${formatWindSpeed(data.windSpeed)}`;
+    wind.textContent = `🌬️ Vento: ${formatWindSpeed(data.windSpeed)}`;
 
     const time = document.createElement("p");
     time.className = "time";
-    time.textContent = `Atualizado em: ${formatDateTime(data.time)}`;
+    time.textContent = `🕒 Atualizado em: ${formatDateTime(data.time)}`;
 
     this.container.append(
       title,
@@ -67,7 +67,7 @@ export class WeatherCard {
   private createHumidity(humidity: number): HTMLElement {
     const el = document.createElement("p");
     el.className = "humidity";
-    el.textContent = `Umidade: ${humidity}%`;
+    el.textContent = `💧 Umidade: ${humidity}%`;
     return el;
   }
 
@@ -83,7 +83,7 @@ export class WeatherCard {
     forecast.forEach((day) => {
       const item = document.createElement("li");
       item.textContent = `
-      ${day.date.toLocaleDateString()} — ${formatTemperature(day.minTemp)} / ${formatTemperature(day.maxTemp)} — ${day.description}
+      📅 ${day.date.toLocaleDateString()} — ${formatTemperature(day.minTemp)} / ${formatTemperature(day.maxTemp)} — ${day.description}
       `;
       list.appendChild(item);
     });
