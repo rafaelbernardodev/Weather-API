@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background: #f3f4f6;
+  color: #111827;
+}
+
+#app {
+  max-width: 480px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* ================================
+   SearchForm
+================================ */
+
+.search-form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.search-form input {
+  flex: 1;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+}
+
+.search-form button {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+/* ================================
+   WeatherCard
+================================ */
+
+.weather-card {
+  margin-top: 24px;
+  padding: 20px;
+
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+
+  color: #222;
+}
+
+/* Cidade */
+.weather-card h2 {
+  margin: 0 0 8px;
+  font-size: 1.5rem;
+}
+
+/* Temperatura */
+.weather-card .temperature {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 4px 0;
+}
+
+/* Descrição */
+.weather-card .description {
+  font-size: 1rem;
+  margin-bottom: 12px;
+  text-transform: capitalize;
+}
+
+/* Informações secundárias */
+.weather-card .wind,
+.weather-card .time,
+.weather-card .humidity {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 4px;
+}
+
+/* ================================
+   Forecast
+================================ */
+
+.weather-card .forecast {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid #eee;
+}
+
+.weather-card .forecast h3 {
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+.weather-card .forecast ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.weather-card .forecast li {
+  font-size: 0.9rem;
+  margin-bottom: 4px;
+  color: #333;
+}
+
+/* ================================
+   Estados
+================================ */
+
+.weather-card .loading {
+  text-align: center;
+  color: #666;
+  font-size: 1rem;
+}
+
+.weather-card .error {
+  color: #b91c1c;
+  font-weight: bold;
+  text-align: center;
+}
